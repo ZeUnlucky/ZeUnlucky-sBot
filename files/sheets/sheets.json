@@ -1,0 +1,45 @@
+{
+    "224162420912816128": {
+        "Ze": {
+            "Params": [
+                "Name",
+                "Age",
+                "Gender",
+                "Sexuality",
+                null
+            ],
+            "Name": "Ze",
+            "Age": "17",
+            "Gender": "Cat",
+            "Sexuality": "Pussy yum"
+        }
+    },
+    "644567247402303509": {
+        "ZeUnlucky": {
+            "Params": [
+                "Name",
+                "Age",
+                "Pic",
+                "Anyfield"
+            ],
+            "Name": "Amazing Spiderman",
+            "Age": "162",
+            "Pic": "https://cdn.discordapp.com/attachments/1071587631344918531/1071592817241112716/b56055-wqBS5GTBwk7F.png",
+            "Anyfield": "This is a field."
+        }
+    },
+    "297539730835505153": {
+        "Bassel": {
+            "Params": [
+                "Name",
+                "Pic",
+                "Age",
+                "Occupation"
+            ],
+            "Name": "Bassel",
+            "Pic": "https://cdn.discordapp.com/attachments/1071587631344918531/1071596476502904852/71389ec7b57a8856ba68915a11f23060.jpg",
+            "Age": "23",
+            "Occupation": "Captain of Asmye"
+        }
+    }
+}
