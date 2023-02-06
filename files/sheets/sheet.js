@@ -143,7 +143,7 @@ function EditSheet(msg, args, Command)
 		return msg.channel.send("> Picture has changed successfully.");
 	}
 }
-function HandleSheetMessage(msg, args)
+function HandleMessage(msg, args)
 {
 	//sheet |
 	if (!args[0])
@@ -185,4 +185,4 @@ function HandleSheetMessage(msg, args)
 		EditSheet(msg,args, Command)
 	}
 }
-module.exports = {EmbedSheet, HandleSheetMessage}
+module.exports = {EmbedSheet, HandleMessage}

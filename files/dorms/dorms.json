@@ -1,0 +1,21 @@
+{
+    "802198125838073876": {
+        "Odyssey's": {
+            "Name": "Odyssey's",
+            "Size": 3,
+            "Vacancy": 1,
+            "Residents": [
+                "John",
+                "Jeff"
+            ]
+        },
+        "CoolBoyz": {
+            "Name": "CoolBoyz",
+            "Size": 1,
+            "Vacancy": 0,
+            "Residents": [
+                "ZeUnlucky"
+            ]
+        }
+    }
+}

@@ -83,5 +83,9 @@ function CheckMsgValid(msg)
 	if (msg.member == null || msg.channel.type == "dm") return false;
 	return true;
 }
+function getRandomIntEx(max) 
+{
+  return Math.floor(Math.random() * Math.floor(max));
+}
 module.exports = {ts, FormatMoment, CreateFile, IsJsonString, MakeJSONString, ReturnSendableJSON, Capitalise,
-CheckMsgValid}
+CheckMsgValid, getRandomIntEx }

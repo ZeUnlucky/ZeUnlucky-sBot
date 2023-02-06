@@ -1,3 +1,5 @@
+
+const Discord = require("../bot.js")
 async function SendPaginatedMessage(Page, msgObj)
 {
 	var CurrentPage = Page;
@@ -6,47 +8,37 @@ async function SendPaginatedMessage(Page, msgObj)
 	
 	CurrentPage.msg.setFooter("Page " + Pos + " out of " + Pages );
 	var message = await msgObj.channel.send(CurrentPage.msg);
-	await message.react("◀️");
-	await message.react("❎");
-	await message.react("▶️");
-
-	const collector = message.createReactionCollector((reaction, user) => !user.bot, {});
-	collector.on('collect',  r=> {
-		if (!r.users.last().bot)
-			r.remove(r.users.last().id);
-		if (r.users.last() == msgObj.author)
+	const button = new Discord.ButtonBuilder()
+	.setCustomId('primary')
+	.setLabel('Click me!')
+	.setStyle(ButtonStyle.Primary)
+	.setDisabled(true);
+		if (FirstReaction.emoji.name == "▶️" || FirstReaction.emoji.name == "◀️")
 		{
-			if (r.emoji.name == "❎")
+			if (FirstReaction.emoji.name == "▶️")
 			{
-				collector.stop();
-				message.delete();
+				if (CurrentPage.FPage != null)
+				{
+					CurrentPage.FPage.BPage = CurrentPage;
+					CurrentPage = CurrentPage.FPage;
+					Pos++;
+				}
 			}
-			else if (r.emoji.name == "▶️" || r.emoji.name == "◀️")
+			else
 			{
-				if (r.emoji.name == "▶️")
+				if (CurrentPage.BPage != null)
 				{
-					if (CurrentPage.FPage != null)
-					{
-						CurrentPage.FPage.BPage = CurrentPage;
-						CurrentPage = CurrentPage.FPage;
-						Pos++;
-					}
+					CurrentPage.BPage.FPage = CurrentPage;
+					CurrentPage = CurrentPage.BPage;
+					Pos--;
 				}
-				else
-				{
-					if (CurrentPage.BPage != null)
-					{
-						CurrentPage.BPage.FPage = CurrentPage;
-						CurrentPage = CurrentPage.BPage;
-						Pos--;
-					}
-				}
-				CurrentPage.msg.setFooter("Page " + Pos + " out of " + Pages);
-				message.edit(CurrentPage.msg);
 			}
-		}	
-	});
-}
+			CurrentPage.msg.setFooter("Page " + Pos + " out of " + Pages);
+			message.edit(CurrentPage.msg);
+		}
+	}	
+
+
 function CalculatePages(Page)
 {
 	var BackTotal = 0;
@@ -56,7 +48,7 @@ function CalculatePages(Page)
 	{
 		BackTotal++;
 		CurrentPage = CurrentPage.BPage;
-		console.log("back")
+		console.log(CurrentPage)
 	}
 	CurrentPage = Page;
 	while (CurrentPage.FPage != null)

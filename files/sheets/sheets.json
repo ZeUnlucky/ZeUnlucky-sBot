@@ -26,6 +26,26 @@
             "Age": "162",
             "Pic": "https://cdn.discordapp.com/attachments/1071587631344918531/1071592817241112716/b56055-wqBS5GTBwk7F.png",
             "Anyfield": "This is a field."
+        },
+        "Odyssey": {
+            "Params": [
+                "Name",
+                "Age",
+                "Pic"
+            ],
+            "Name": "Odyssey",
+            "Age": "62",
+            "Pic": "https://cdn.discordapp.com/attachments/1071646343501713541/1071648582756741181/sheep.webp"
+        },
+        "Yonio": {
+            "Params": [
+                "Name",
+                "Pic",
+                "Favcolor"
+            ],
+            "Name": "Yonio",
+            "Pic": "https://media.discordapp.net/attachments/1071646343501713541/1071671611800952862/IMG_8731.jpg",
+            "Favcolor": "green"
         }
     },
     "297539730835505153": {
@@ -40,6 +60,26 @@
             "Pic": "https://cdn.discordapp.com/attachments/1071587631344918531/1071596476502904852/71389ec7b57a8856ba68915a11f23060.jpg",
             "Age": "23",
             "Occupation": "Captain of Asmye"
+        }
+    },
+    "505819495571652624": {
+        "Kasey": {
+            "Params": [
+                "Name",
+                "Age",
+                "Pic"
+            ],
+            "Name": "Kasey",
+            "Age": "31",
+            "Pic": "https://cdn.discordapp.com/attachments/1071587631344918531/1071674390711906304/11c7dd3bc3d2893f318e400ecb11d7d7.jpg"
+        }
+    },
+    "625410490998325279": {
+        "Stelaria": {
+            "Params": [
+                "Name"
+            ],
+            "Name": "Stelaria"
         }
     }
 }
